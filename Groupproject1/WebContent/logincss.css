@@ -1,0 +1,36 @@
+.login-page
+{
+width:300px;
+padding:5% 0 0;
+margin:auto;
+}
+.form2
+{
+position:relative;
+
+background:#ffffff;
+max-width:360px;
+margin:0 auto 100px;
+padding:15px;
+text-align:center;
+box-shadow:0 0 20px 0 rgba(0,0,0,0.2),0,5px 5px 0 rgba(0,0,0,0.24);
+}
+
+.form2 input
+{
+font-family:"roboto",sans-serif;
+outline:0;
+background:#f2f2f2;
+width:50%;
+border:0;
+margin:0 0 20px;
+padding:7px;
+box-sizing:border-box;
+font-size:14px;
+}
+
+
+body {
+  background: background="l2.jpg" /* fallback for old browsers 768b52 8dc26f 78b852*/
+      
+}

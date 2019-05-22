@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="packageformcss.css">
+<title>Insert title here</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body background="aa.jpeg">
+<div class="container1">
+<form  action="SaveCustomerdetails" method="post">
+<div class="container">
+<h2>Package Form</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Customer Name:&nbsp;&nbsp;<input type="text" name="customername" placeholder="enter customername"> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Number:&nbsp;&nbsp;<input type="text" name="contactnumber" placeholder="contact number"> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Current City:&nbsp;&nbsp;<input type="text" name="fromcity" placeholder="enter current city"> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Destination City:&nbsp;&nbsp;<input type="text" name="destinationcity" placeholder="enter destination city"> <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Accepted Date:<input type="date" name="date1"><br>
+<div data-ng-app="" data-ng-init="quantity=0;price=5">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PackageWeight: <input type="number"  step=".001" ng-model="quantity" min="0" name="pw">
+Price: Rs. 5/kg <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Total cost: <input type="text" name="cost" value={{quantity*price}}><br>
+</div>
+<input type="submit" value="submit" class="button"></div>
+</form></div>
+</body>
+</html>

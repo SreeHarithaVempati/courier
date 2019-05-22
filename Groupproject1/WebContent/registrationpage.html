@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" type="text/css" href="registrationcss.css">
+
+</head>
+<body background="r.jpg">
+<form name="myForm" action="Saveregistrationdetails" method="post" onsubmit="return(validateForm())">
+<div class="login-page" align="center">
+<div class="form2">
+<h2 align="center" style="color:#008cba"> Registration Form</h2>
+<input type="text" name="name" placeholder="enter username....">
+<input type="text" name="email" placeholder="example@gmail.com">
+<input type="number" name="phno" placeholder="+91">
+<input type="password" name="password" placeholder="*****">
+<font color='red'> <DIV id="une"> </DIV> </font>
+<input type="submit" value="register"  style="background-color:#008cba">
+<div class="login-page" align="center">
+<div class="form2">
+</form>
+<SCRIPT type="Text/JavaScript">
+function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+    	document.getElementById('une').innerHTML = "invalid emailid";
+    	 alert("invalid emailid");  
+    	myForm.email.focus();
+    	  return(false);
+    }
+    var name=document.myForm.name.value;  
+    var password=document.myForm.password.value;  
+    var phno.=document.myForm.phno.value;  
+   
+    if (name==null || name==""){  
+    	
+      alert("Name can't be blank");  
+      return false;  
+    }
+    if(password.length<6){  
+      alert("Password must be at least 6 characters long.");  
+      return false
+    }
+    if(phno.length<10||phno.length>10)
+    	{
+    	alert("Enter correct mobileno.");  
+        return false
+    	}
+    else
+    	{
+    	return(true);
+    	}
+}
+</SCRIPT>
+</body>
+</html>
